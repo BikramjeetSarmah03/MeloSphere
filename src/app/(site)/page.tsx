@@ -1,5 +1,5 @@
 import ListItem from "@/components/ListItem";
-import Header from "@/components/common/Header";
+import Header from "@/components/layout/Header";
 
 export default function Home() {
   return (
