@@ -29,6 +29,9 @@ dependencies:
   react-dom:
     specifier: latest
     version: 18.2.0(react@18.2.0)
+  react-hook-form:
+    specifier: ^7.46.2
+    version: 7.46.2(react@18.2.0)
   react-hot-toast:
     specifier: ^2.4.1
     version: 2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0)
@@ -41,6 +44,9 @@ dependencies:
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
+  uniqid:
+    specifier: ^5.4.0
+    version: 5.4.0
   zustand:
     specifier: ^4.4.1
     version: 4.4.1(@types/react@18.2.23)(react@18.2.0)
@@ -58,6 +64,9 @@ devDependencies:
   '@types/react-dom':
     specifier: latest
     version: 18.2.8
+  '@types/uniqid':
+    specifier: ^5.3.2
+    version: 5.3.2
   autoprefixer:
     specifier: latest
     version: 10.4.16(postcss@8.4.30)
@@ -710,6 +719,10 @@ packages:
   /@types/node@20.7.1:
     resolution: {integrity: sha512-LT+OIXpp2kj4E2S/p91BMe+VgGX2+lfO+XTpfXhh+bCk2LkQtHZSub8ewFBMGP5ClysPjTDFa4sMI8Q3n4T0wg==}
 
+  /@types/node@20.8.0:
+    resolution: {integrity: sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ==}
+    dev: false
+
   /@types/phoenix@1.6.2:
     resolution: {integrity: sha512-I3mm7x5XIi+5NsIY3nfreY+H4PmQdyBwJ84SiUSOxSg1axwEPNmkKWYVm56y+emDpPPUL3cPzrLcgRWSd9gI7g==}
     dev: false
@@ -732,10 +745,14 @@ packages:
   /@types/scheduler@0.16.4:
     resolution: {integrity: sha512-2L9ifAGl7wmXwP4v3pN4p2FLhD0O1qsJpvKmNin5VA8+UvNVb447UDaAEV6UdrkA+m/Xs58U1RFps44x6TFsVQ==}
 
+  /@types/uniqid@5.3.2:
+    resolution: {integrity: sha512-/NYoaZpWsnAJDsGYeMNDeG3p3fuUb4AiC7MfKxi5VSu18tXd08w6Ch0fKW94T4FeLXXZwZPoFgHA1O0rDYKyMQ==}
+    dev: true
+
   /@types/websocket@1.0.7:
     resolution: {integrity: sha512-62Omr8U0PO+hgjLCpPnMsmjh2/FRwIGOktZHyYAUzooEJotwkXHMp7vCacdYi8haxBNOiw9bc2HIHI+b/MPNjA==}
     dependencies:
-      '@types/node': 20.7.1
+      '@types/node': 20.8.0
     dev: false
 
   /@typescript-eslint/parser@6.7.3(eslint@8.50.0)(typescript@5.2.2):
@@ -2879,6 +2896,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-hook-form@7.46.2(react@18.2.0):
+    resolution: {integrity: sha512-x1DWmHQchV7x2Rq9l99M/cQHC8JGchAnw9Z0uTz5KrPa0bTl/Inm1NR7ceOARfIrkNuQNAhuSuZPYa6k7QYn3Q==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-hot-toast@2.4.1(csstype@3.1.2)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==}
     engines: {node: '>=10'}
@@ -3473,6 +3499,10 @@ packages:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
     dev: true
+
+  /uniqid@5.4.0:
+    resolution: {integrity: sha512-38JRbJ4Fj94VmnC7G/J/5n5SC7Ab46OM5iNtSstB/ko3l1b5g7ALt4qzHFgGciFkyiRNtDXtLNb+VsxtMSE77A==}
+    dev: false
 
   /universalify@0.1.2:
     resolution: {integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==}

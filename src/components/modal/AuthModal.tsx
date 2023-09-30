@@ -10,7 +10,7 @@ import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect } from "react";
 
 import Modal from "../common/Modal";
-import useAuthModal from "@/hooks/useAuthModa";
+import useAuthModal from "@/hooks/useAuthModal";
 
 export default function AuthModal() {
   const supabaseClient = useSupabaseClient();
