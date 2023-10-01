@@ -1,12 +1,15 @@
-import getSongsById from "@/actions/getSongsByUserid";
-import Sidebar from "@/components/layout/Sidebar";
+import type { Metadata } from "next";
+import { Figtree } from "next/font/google";
+import "@/styles/globals.css";
+
 import ModalProvider from "@/providers/ModalProvider";
 import SupabaseProvider from "@/providers/SupabaseProvider";
 import ToasterProvider from "@/providers/ToasterProvider";
 import UserProvider from "@/providers/UserProvider";
-import "@/styles/globals.css";
-import type { Metadata } from "next";
-import { Figtree } from "next/font/google";
+
+import getSongsById from "@/actions/getSongsByUserId";
+
+import Sidebar from "@/components/layout/Sidebar";
 
 const font = Figtree({ subsets: ["latin"] });
 
