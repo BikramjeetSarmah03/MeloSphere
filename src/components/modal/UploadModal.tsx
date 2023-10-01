@@ -125,7 +125,7 @@ export default function UploadModal() {
         />
 
         <div>
-          <div className="pb-1">Select an image</div>
+          <div className="pb-1">Select a song file</div>
           <Input
             id="song"
             type="file"
@@ -135,7 +135,7 @@ export default function UploadModal() {
           />
         </div>
         <div>
-          <div className="pb-1">Select a song file</div>
+          <div className="pb-1">Select an image</div>
           <Input
             id="image"
             type="file"

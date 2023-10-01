@@ -2,11 +2,18 @@
 
 import { TbPlaylist } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
-import useAuthModal from "@/hooks/useAuthModal";
+
+import { Song } from "@/utils/types";
 import { useUser } from "@/hooks/useUser";
 import useUploadModal from "@/hooks/useUploadModal";
+import useAuthModal from "@/hooks/useAuthModal";
+import MediaItem from "../MediaItem";
 
-export default function Libary() {
+interface LibaryProps {
+  songs: Song[];
+}
+
+export default function Libary({ songs }: LibaryProps) {
   const authModal = useAuthModal();
   const uploadModal = useUploadModal();
   const { user } = useUser();
@@ -32,7 +39,11 @@ export default function Libary() {
         />
       </div>
 
-      <div className="flex flex-col gap-y-2 mt-4 px-3">List of Songs!</div>
+      <div className="flex flex-col gap-y-2 mt-4 px-3">
+        {songs.map((item) => (
+          <MediaItem key={item.id} onClick={() => {}} data={item} />
+        ))}
+      </div>
     </div>
   );
 }
