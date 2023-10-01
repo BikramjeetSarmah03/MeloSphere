@@ -2,6 +2,7 @@
 
 import { Song } from "@/utils/types";
 import MediaItem from "./MediaItem";
+import LikeButton from "./LikeButton";
 
 type Props = {
   songs: Song[];
@@ -24,7 +25,7 @@ export default function SearchContent({ songs }: Props) {
             <MediaItem data={song} onClick={() => {}} />
           </div>
 
-          {/* TODO: Add like button here */}
+          <LikeButton songId={song.id} />
         </div>
       ))}
     </div>
