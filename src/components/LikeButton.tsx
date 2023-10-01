@@ -16,11 +16,10 @@ type Props = {
 export default function LikeButton({ songId }: Props) {
   const router = useRouter();
   const { supabaseClient } = useSessionContext();
-
   const authModal = useAuthModal();
   const { user } = useUser();
 
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState<boolean>(false);
 
   useEffect(() => {
     if (!user?.id) {
@@ -34,12 +33,18 @@ export default function LikeButton({ songId }: Props) {
         .eq("user_id", user.id)
         .eq("song_id", songId)
         .single();
+
+      if (!error && data) {
+        setIsLiked(true);
+      }
     };
 
     fetchData();
   }, [songId, supabaseClient, user?.id]);
 
-  const handleLiked = async () => {
+  const Icon = isLiked ? AiFillHeart : AiOutlineHeart;
+
+  const handleLike = async () => {
     if (!user) {
       return authModal.onOpen();
     }
@@ -55,7 +60,6 @@ export default function LikeButton({ songId }: Props) {
         toast.error(error.message);
       } else {
         setIsLiked(false);
-        toast.success("UnLiked");
       }
     } else {
       const { error } = await supabaseClient.from("liked_songs").insert({
@@ -67,17 +71,21 @@ export default function LikeButton({ songId }: Props) {
         toast.error(error.message);
       } else {
         setIsLiked(true);
-        toast.success("Liked");
+        toast.success("Success");
       }
     }
 
     router.refresh();
   };
 
-  const Icon = isLiked ? AiFillHeart : AiOutlineHeart;
-
   return (
-    <button className="hover:opacity-75 transition" onClick={handleLiked}>
+    <button
+      className="
+        cursor-pointer 
+        hover:opacity-75 
+        transition
+      "
+      onClick={handleLike}>
       <Icon color={isLiked ? "#22c55e" : "white"} size={25} />
     </button>
   );
