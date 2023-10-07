@@ -22,7 +22,7 @@ export default function Slider({ value, onChange }: SliderProps) {
       step={0.1}
       aria-label="Volume">
       <RadixSlider.Track className="bg-neutral-600 relative grow">
-        <RadixSlider.Range className="absolute bg-white rounded-full h-full" />
+        <RadixSlider.Range className="absolute bg-white rounded-full h-1 cursor-pointer" />
       </RadixSlider.Track>
     </RadixSlider.Root>
   );
