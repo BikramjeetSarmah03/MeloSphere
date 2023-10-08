@@ -10,7 +10,7 @@ import Box from "../common/Box";
 import SidebarItem from "./SidebarItem";
 import Libary from "./Libary";
 
-import { Song } from "@/utils/types";
+import { Song } from "@/types/types";
 import usePlayer from "@/hooks/usePlayer";
 
 type Props = {

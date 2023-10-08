@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { Database } from "@/utils/types_db";
+import { Database } from "@/types/types_db";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
 

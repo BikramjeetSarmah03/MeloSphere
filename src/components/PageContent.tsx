@@ -1,6 +1,6 @@
 "use client";
 
-import { Song } from "@/utils/types";
+import { Song } from "@/types/types";
 import SongItem from "./SongItem";
 import useOnPlay from "@/hooks/useOnPlay";
 

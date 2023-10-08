@@ -29,7 +29,7 @@ export interface Price {
   type?: Stripe.Price.Type;
   interval?: Stripe.Price.Recurring.Interval;
   interval_count?: number;
-  trial_perios_days?: number | null;
+  trial_period_days?: number | null;
   metadata?: Stripe.Metadata;
   products?: Product;
 }

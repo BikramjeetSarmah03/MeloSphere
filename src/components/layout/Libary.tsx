@@ -3,7 +3,7 @@
 import { TbPlaylist } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
 
-import { Song } from "@/utils/types";
+import { Song } from "@/types/types";
 import { useUser } from "@/hooks/useUser";
 import useUploadModal from "@/hooks/useUploadModal";
 import useAuthModal from "@/hooks/useAuthModal";

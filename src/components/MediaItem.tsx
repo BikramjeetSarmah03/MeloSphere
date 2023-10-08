@@ -1,7 +1,7 @@
 "use client";
 
 import useLoadImage from "@/hooks/useLoadImage";
-import { Song } from "@/utils/types";
+import { Song } from "@/types/types";
 import Image from "next/image";
 
 type Props = {

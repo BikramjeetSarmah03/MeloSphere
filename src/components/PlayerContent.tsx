@@ -6,7 +6,7 @@ import { AiFillStepBackward, AiFillStepForward } from "react-icons/ai";
 import { HiSpeakerWave } from "react-icons/hi2";
 import useSound from "use-sound";
 
-import { Song } from "@/utils/types";
+import { Song } from "@/types/types";
 import usePlayer from "@/hooks/usePlayer";
 import MediaItem from "./MediaItem";
 import LikeButton from "./LikeButton";

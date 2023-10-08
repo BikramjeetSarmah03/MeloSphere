@@ -1,4 +1,4 @@
-import { Song } from "@/utils/types";
+import { Song } from "@/types/types";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 
