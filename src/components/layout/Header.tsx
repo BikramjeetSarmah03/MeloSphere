@@ -13,6 +13,7 @@ import { useUser } from "@/hooks/useUser";
 
 import Button from "../common/Button";
 import { FaUserAlt } from "react-icons/fa";
+import usePlayer from "@/hooks/usePlayer";
 
 type Props = {
   children: React.ReactNode;
@@ -25,10 +26,11 @@ export default function Header({ children, className }: Props) {
 
   const supabaseClient = useSupabaseClient();
   const { user } = useUser();
+  const player = usePlayer();
 
   const handleLogout = async () => {
     const { error } = await supabaseClient.auth.signOut();
-    // TODO: reset any playing song
+    player.reset();
     router.refresh();
 
     if (error) {
